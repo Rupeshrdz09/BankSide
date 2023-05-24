@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #FF7A7A;
+    border-bottom: 5px solid #FFFFFF;
+
+}
+
+p,
+a,
+.nav-link:hover {
+    font-family: 'Poppins', Roboto, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.logo-txt,
+.nav-txt {
+    padding-left: 15px;
+}
+
+.nav-link {
+    img {
+        width: 21px;
+        height: 25px;
+    }
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}

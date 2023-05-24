@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <div class="navbar-logo">
+            <img src="assets/navbar_logo.png" alt="Logo">
+        </div>
+        <p class="logo-txt">Assets Square</p>
+
+        <button _ngcontent-ota-c38="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"
+            class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-txt" routerLink="/home">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item asstes-txt">
+                    <a class="nav-link nav-txt" routerLinkActive="active-link">
+                        Assets
+                    </a>
+                    <ul class="assets-submenu list-unstyled">
+                        <li><a routerLink="/add-assets"  >Add Assets</a> </li>
+                        <li class="assets-list"> <a routerLink="/asset-List">Assets List</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" x data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <img src="assets/logout.svg" alt="Register"><span class="nav-txt">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  
+  <!-- Modal -->
+  <div class="modal logout-modal" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body mx-auto">
+            <div><p>Are you sure to Logout?</p></div>
+            <br>
+            <div class="buttons">
+                <div class="row">
+                    <div class="col">
+                        <button routerLink="/login" >Yes</button>
+                    </div>
+                    <div class="col"> <button data-bs-dismiss="modal" class="no-btn">No</button></div>
+                </div>
+            </div>
+          
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,59 @@
+.asset-detail-card{
+    border-radius: 0;
+    border: none;
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+}
+.card-img-top{
+border-radius: 0;
+width: 100%;
+height: auto;
+}
+h5{
+    font-family: 'Poppins', Roboto, "Helvetica Neue", sans-serif;
+    font-size: 20px;
+}
+.card-text{
+    font-family: 'Poppins', Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+.view-detail-btn{
+    background-color: #FF7A7A;
+    font-family: 'Poppins', Roboto, "Helvetica Neue", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 7px 14px;
+    width: 150px;
+}
+.modal{
+   .card{
+    padding: 20px;
+    border: none;
+    width: 100%;
+    height:auto;
+   }
+}
+.btn-close:focus{
+box-shadow: none;
+}
+
+.modal-body{
+    background-color: transparent;
+}
+
+.modal-content{
+    background-color: #FF7A7A;
+    .card{
+        background: transparent;
+        p{
+            color: #292929;
+        }
+    }
+    .modal-header
+    {
+        border-bottom: 0;
+}
+}

@@ -1,0 +1,167 @@
+<form [formGroup]="addAssets" (ngSubmit)="onSubmit()">
+    <div class="container-fluid first-dropdowwn d-flex">
+        <p>Asset Type :</p>
+        <select class="select-assetType" (change)="changeAssettype($event)" formControlName="assetType">
+            <option value="" disabled selected>-Select your option-</option>
+            <option *ngFor="let asset of Assets">{{asset}}</option>
+        </select>
+    </div>
+    <div
+        *ngIf="formSubmitted || addAssets.controls['assetType'].invalid && (addAssets.controls['assetType'].dirty || addAssets.controls['assetType'].touched)">
+        <p class="text-danger"> Please enter Asset Type</p>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid first-dropdowwn" formGroupName="assetsDetails">
+        <p>Select Assets Details :</p>
+        <div class="row asset-detail">
+            <div class="col-lg col-md-4 col-sm-6">
+                <select formControlName="assetDetailone">
+                    <option value="" disabled selected>-Select your option-</option>
+                    <option *ngFor="let detailone of assetDetailone">{{detailone}}</option>
+                </select>
+            </div>
+            <!-- <div *ngIf="formSubmitted || addAssets.assetsDetails.controls['assetDetailone'].invalid && (assetsDetails.controls['assetDetailone'].dirty || assetsDetails.controls['assetDetailone'].touched)">
+                <p class="text-danger"> Please enter Asset Type</p>
+            </div>
+             -->
+            <div class="col-lg col-md-4 col-sm-6 asset-detail-min-width">
+                <select formControlName="assetDetailtwo">
+                    <option value="" disabled selected>-Select your option-</option>
+                    <option *ngFor="let detailtwo of assetDetailtwo">{{detailtwo}}</option>
+                </select>
+            </div>
+
+            <div class="col-lg col-md-4 col-sm-6 second-row asset-detail-min-width">
+                <select formControlName="assetDetailthree">
+                    <option value="" disabled selected>-Select your option-</option>
+                    <option *ngFor="let detailthree of assetDetailthree">{{detailthree}}</option>
+                </select>
+            </div>
+
+            <div class="col-lg col-md-4 col-sm-6 second-row assetDetailFourthSelect">
+                <select formControlName="assetDetailfour">
+                    <option value="" disabled selected>-Select your option-</option>
+                    <option *ngFor="let detailfour of assetDetailfour">{{detailfour}}</option>
+                </select>
+            </div>
+
+            <div class="col-lg col-md-4 col-sm-6 second-row assetDetailFifthSelect">
+                <select formControlName="assetDetailfive">
+                    <option value="" disabled selected>-Select your option-</option>
+                    <option *ngFor="let detailfive of assetDetailfive">{{detailfive}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <div class="container-fluid first-dropdowwn" formGroupName="assetDocuments">
+        <p>Upload Documents :</p>
+        <div class="row doc-upload">
+            <div class="col-md-3">
+                <input type="file" id="customFile" accept="application/pdf" formControlName="documentOne" />
+            </div>
+            <div class="col-md-3">
+                <input type="file" id="customFile" accept="application/pdf" formControlName="documentTwo" />
+            </div>
+            <div class="col-md-3">
+                <input type="file" id="customFile" accept="application/pdf" formControlName="documentThree" />
+            </div>
+            <div class="col-md-3">
+                <input type="file" id="customFile" accept="application/pdf" formControlName="documentFour" />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid first-dropdowwn " formGroupName="assetImages">
+        <p>Upload Documents :</p>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcone || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLone($event);" class="ps-1" formControlName="imageOne" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrctwo || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLtwo($event);" class="ps-1" formControlName="imageTwo" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcthree || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLthree($event);" class="ps-1" formControlName="imageThree" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcfour || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLfour($event);" class="ps-1" formControlName="imageFour" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcfive || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLfive($event);" class="ps-1" formControlName="imageFive" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcsix || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLsix($event);" class="ps-1" formControlName="imageSix" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrcseven || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLseven($event);" class="ps-1" formControlName="imageSeven" />
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="img-container">
+                    <img [src]="imageSrceight || 'assets/imageview.png'" alt="your image" />
+                    <input type='file' (change)="readURLeight($event);" class="ps-1" formControlName="imageEight" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div class="container-fluid first-dropdowwn" formGroupName="assetDiscrition">
+        <p>Description & Pricing :</p>
+
+        <div class="row input-fields">
+            <div class="col-md-6 col-sm text-center">
+                <textarea formControlName="description"></textarea>
+            </div>
+            <div class="col-md-6 col-sm">
+                <div class="row input">
+                    <div class="col-3">  <label>Loan Lended</label></div>
+                    <div class="col-9"><input formControlName="loanLended"></div>
+                </div>
+                <div class="row input">
+                    <div class="col-3">  <label>Loan recovered</label></div>
+                    <div class="col-9"> <input formControlName="loanRecovered"></div>
+                </div>
+                <div class="row input">
+                    <div class="col-3"> <label>Final Pricing</label></div>
+                    <div class="col-9"><input formControlName="finalPrice"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="text-center">
+    <button class="submit-btn" type="submit">Submit</button>
+</div>
+</form>

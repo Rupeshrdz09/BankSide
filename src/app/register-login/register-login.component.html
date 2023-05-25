@@ -1,0 +1,30 @@
+<!-- <app-registerlogin-navbar></app-registerlogin-navbar> -->
+<!-- <app-footer></app-footer> -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <div class="navbar-logo">
+            <img src="assets/navbar_logo.png" alt="Logo">
+        </div>
+        <p class="logo-txt">Assets Square</p>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/register">
+                        <img src="assets/register-icon.svg" alt="Register"><span class="nav-txt">Register</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">
+                        <img src="assets/login-icon.svg" alt="Register"><span class="nav-txt">Login</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

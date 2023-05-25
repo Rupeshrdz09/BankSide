@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <div class="navbar-logo">
+            <img src="assets/navbar_logo.png" alt="Logo">
+        </div>
+        <p class="logo-txt">Assets Square</p>
+
+        <button _ngcontent-ota-c38="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"
+            class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-txt" routerLink="/footer">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item asstes-txt">
+                    <a class="nav-link nav-txt" routerLinkActive="active-link">
+                        Assets
+                    </a>
+                    <ul class="assets-submenu list-unstyled">
+                        <li><a routerLink="/add-assets"  >Add Assets</a> </li>
+                        <li class="assets-list"> <a routerLink="/add-assets">Assets List</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active-link">
+                        <img src="assets/logout.svg" alt="Register"><span class="nav-txt">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
